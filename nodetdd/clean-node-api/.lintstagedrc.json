@@ -1,0 +1,8 @@
+{
+    "*.ts": {
+        "pre-commit": [
+            "eslint 'src/**' --fix",
+            "git add"
+        ]
+    }
+}
