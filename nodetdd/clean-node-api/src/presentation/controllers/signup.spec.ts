@@ -1,4 +1,4 @@
-import { SignUpController } from './SignUp'
+import { SignUpController } from './signup'
 
 describe('SignUP Controller', () => {
   test('Should return 400 if no name is provided', () => {
@@ -12,5 +12,6 @@ describe('SignUP Controller', () => {
     }
     const httpResponse = sut.handle(httpRequest)
     expect(httpResponse.statusCode).toBe(400)
+    expect(httpResponse.body).toEqual(new Error('Missing para: name'))
   })
 })
